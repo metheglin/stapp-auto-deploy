@@ -47,4 +47,8 @@
 REPOS="$1"
 REV="$2"
 
-mailer.py commit "$REPOS" "$REV" /path/to/mailer.conf
+USER='rvuser'
+HOST='rvclient02sk.rv2010.net'
+PATH='/usr/local/svn-co/samsung-campaign'
+
+ssh ${USER}@${HOST} "cd ${PATH}; svn update"
