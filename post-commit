@@ -47,8 +47,10 @@
 REPOS="$1"
 REV="$2"
 
+SSH=/usr/bin/ssh
+
 USER='rvuser'
 HOST='rvclient02sk.rv2010.net'
 PATH='/usr/local/svn-co/samsung-campaign'
 
-ssh ${USER}@${HOST} "cd ${PATH}; svn update"
+$SSH ${USER}@${HOST} "cd ${PATH}; svn update"
